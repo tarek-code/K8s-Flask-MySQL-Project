@@ -1,7 +1,5 @@
--- Database initialization script for Flask application
--- Note: Replace 'yourpassword' with a secure password in production
 CREATE DATABASE IF NOT EXISTS flaskdb;
-CREATE USER IF NOT EXISTS 'flaskuser'@'%' IDENTIFIED BY 'yourpassword';
+CREATE USER IF NOT EXISTS 'flaskuser'@'%' IDENTIFIED WITH mysql_native_password BY 'yourpassword';
 GRANT ALL PRIVILEGES ON flaskdb.* TO 'flaskuser'@'%';
 FLUSH PRIVILEGES;
 USE flaskdb;
