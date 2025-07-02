@@ -1,6 +1,6 @@
 from flask import Flask
 import pymysql
-
+ 
 app = Flask(__name__)
 
 def get_connection():
