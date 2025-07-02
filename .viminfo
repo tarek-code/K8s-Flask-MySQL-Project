@@ -12,7 +12,7 @@
 ~h
 # Command Line History (newest to oldest):
 :wq
-|2,0,1751476042,,"wq"
+|2,0,1751481187,,"wq"
 :q!
 |2,0,1751475755,,"q!"
 
@@ -27,224 +27,314 @@
 # Registers:
 
 # File marks:
-'0  19  0  ~/flask-ingress.yaml
-|4,48,19,0,1751476042,"~/flask-ingress.yaml"
-'1  13  0  ~/flask-nodeport.yaml
-|4,49,13,0,1751475949,"~/flask-nodeport.yaml"
-'2  16  23  ~/mysql-network-policy.yaml
-|4,50,16,23,1751475803,"~/mysql-network-policy.yaml"
-'3  22  0  ~/networkpolicy.yaml
-|4,51,22,0,1751475755,"~/networkpolicy.yaml"
-'4  6  13  ~/debug-pod.yaml
-|4,52,6,13,1751475683,"~/debug-pod.yaml"
-'5  69  0  ~/flask-deployment.yaml
-|4,53,69,0,1751475575,"~/flask-deployment.yaml"
-'6  47  41  ~/flask-deployment_old.yaml
-|4,54,47,41,1751475541,"~/flask-deployment_old.yaml"
+'0  14  0  ~/limit-range.yaml
+|4,48,14,0,1751481188,"~/limit-range.yaml"
+'1  13  0  ~/resource-quota.yaml
+|4,49,13,0,1751481094,"~/resource-quota.yaml"
+'2  8  31  ~/flask-configmap.yaml
+|4,50,8,31,1751479090,"~/flask-configmap.yaml"
+'3  8  24  ~/mysql-configmap.yaml
+|4,51,8,24,1751478540,"~/mysql-configmap.yaml"
+'4  11  53  ~/mysql-secret.yaml
+|4,52,11,53,1751478498,"~/mysql-secret.yaml"
+'5  11  53  ~/mysql-secret.yaml
+|4,53,11,53,1751478350,"~/mysql-secret.yaml"
+'6  21  20  ~/mysql-pv.yaml
+|4,54,21,20,1751478308,"~/mysql-pv.yaml"
+'7  12  21  ~/mysql-pvc.yaml
+|4,55,12,21,1751478266,"~/mysql-pvc.yaml"
+'8  10  16  ~/mysql-service.yaml
+|4,56,10,16,1751478225,"~/mysql-service.yaml"
+'9  52  34  ~/mysql-statefulsetOldHostPath.yaml
+|4,57,52,34,1751477924,"~/mysql-statefulsetOldHostPath.yaml"
 
 # Jumplist (newest first):
--'  19  0  ~/flask-ingress.yaml
-|4,39,19,0,1751476042,"~/flask-ingress.yaml"
--'  1  0  ~/flask-ingress.yaml
-|4,39,1,0,1751476032,"~/flask-ingress.yaml"
--'  13  0  ~/flask-nodeport.yaml
-|4,39,13,0,1751475949,"~/flask-nodeport.yaml"
--'  13  0  ~/flask-nodeport.yaml
-|4,39,13,0,1751475949,"~/flask-nodeport.yaml"
--'  1  0  ~/flask-nodeport.yaml
-|4,39,1,0,1751475931,"~/flask-nodeport.yaml"
--'  1  0  ~/flask-nodeport.yaml
-|4,39,1,0,1751475931,"~/flask-nodeport.yaml"
--'  16  23  ~/mysql-network-policy.yaml
-|4,39,16,23,1751475803,"~/mysql-network-policy.yaml"
--'  16  23  ~/mysql-network-policy.yaml
-|4,39,16,23,1751475803,"~/mysql-network-policy.yaml"
--'  16  23  ~/mysql-network-policy.yaml
-|4,39,16,23,1751475803,"~/mysql-network-policy.yaml"
--'  16  23  ~/mysql-network-policy.yaml
-|4,39,16,23,1751475803,"~/mysql-network-policy.yaml"
--'  1  0  ~/mysql-network-policy.yaml
-|4,39,1,0,1751475782,"~/mysql-network-policy.yaml"
--'  1  0  ~/mysql-network-policy.yaml
-|4,39,1,0,1751475782,"~/mysql-network-policy.yaml"
--'  1  0  ~/mysql-network-policy.yaml
-|4,39,1,0,1751475782,"~/mysql-network-policy.yaml"
--'  1  0  ~/mysql-network-policy.yaml
-|4,39,1,0,1751475782,"~/mysql-network-policy.yaml"
--'  22  0  ~/networkpolicy.yaml
-|4,39,22,0,1751475755,"~/networkpolicy.yaml"
--'  22  0  ~/networkpolicy.yaml
-|4,39,22,0,1751475755,"~/networkpolicy.yaml"
--'  22  0  ~/networkpolicy.yaml
-|4,39,22,0,1751475755,"~/networkpolicy.yaml"
--'  22  0  ~/networkpolicy.yaml
-|4,39,22,0,1751475755,"~/networkpolicy.yaml"
--'  22  0  ~/networkpolicy.yaml
-|4,39,22,0,1751475755,"~/networkpolicy.yaml"
--'  22  0  ~/networkpolicy.yaml
-|4,39,22,0,1751475755,"~/networkpolicy.yaml"
--'  22  0  ~/networkpolicy.yaml
-|4,39,22,0,1751475755,"~/networkpolicy.yaml"
--'  22  0  ~/networkpolicy.yaml
-|4,39,22,0,1751475755,"~/networkpolicy.yaml"
--'  1  0  ~/networkpolicy.yaml
-|4,39,1,0,1751475709,"~/networkpolicy.yaml"
--'  1  0  ~/networkpolicy.yaml
-|4,39,1,0,1751475709,"~/networkpolicy.yaml"
--'  1  0  ~/networkpolicy.yaml
-|4,39,1,0,1751475709,"~/networkpolicy.yaml"
--'  1  0  ~/networkpolicy.yaml
-|4,39,1,0,1751475709,"~/networkpolicy.yaml"
--'  1  0  ~/networkpolicy.yaml
-|4,39,1,0,1751475709,"~/networkpolicy.yaml"
--'  1  0  ~/networkpolicy.yaml
-|4,39,1,0,1751475709,"~/networkpolicy.yaml"
--'  1  0  ~/networkpolicy.yaml
-|4,39,1,0,1751475709,"~/networkpolicy.yaml"
--'  1  0  ~/networkpolicy.yaml
-|4,39,1,0,1751475709,"~/networkpolicy.yaml"
--'  6  13  ~/debug-pod.yaml
-|4,39,6,13,1751475683,"~/debug-pod.yaml"
--'  6  13  ~/debug-pod.yaml
-|4,39,6,13,1751475683,"~/debug-pod.yaml"
--'  6  13  ~/debug-pod.yaml
-|4,39,6,13,1751475683,"~/debug-pod.yaml"
--'  6  13  ~/debug-pod.yaml
-|4,39,6,13,1751475683,"~/debug-pod.yaml"
--'  6  13  ~/debug-pod.yaml
-|4,39,6,13,1751475683,"~/debug-pod.yaml"
--'  6  13  ~/debug-pod.yaml
-|4,39,6,13,1751475683,"~/debug-pod.yaml"
--'  6  13  ~/debug-pod.yaml
-|4,39,6,13,1751475683,"~/debug-pod.yaml"
--'  6  13  ~/debug-pod.yaml
-|4,39,6,13,1751475683,"~/debug-pod.yaml"
--'  6  13  ~/debug-pod.yaml
-|4,39,6,13,1751475683,"~/debug-pod.yaml"
--'  6  13  ~/debug-pod.yaml
-|4,39,6,13,1751475683,"~/debug-pod.yaml"
--'  6  13  ~/debug-pod.yaml
-|4,39,6,13,1751475683,"~/debug-pod.yaml"
--'  6  13  ~/debug-pod.yaml
-|4,39,6,13,1751475683,"~/debug-pod.yaml"
--'  6  13  ~/debug-pod.yaml
-|4,39,6,13,1751475683,"~/debug-pod.yaml"
--'  6  13  ~/debug-pod.yaml
-|4,39,6,13,1751475683,"~/debug-pod.yaml"
--'  6  13  ~/debug-pod.yaml
-|4,39,6,13,1751475683,"~/debug-pod.yaml"
--'  6  13  ~/debug-pod.yaml
-|4,39,6,13,1751475683,"~/debug-pod.yaml"
--'  1  0  ~/debug-pod.yaml
-|4,39,1,0,1751475663,"~/debug-pod.yaml"
--'  1  0  ~/debug-pod.yaml
-|4,39,1,0,1751475663,"~/debug-pod.yaml"
--'  1  0  ~/debug-pod.yaml
-|4,39,1,0,1751475663,"~/debug-pod.yaml"
--'  1  0  ~/debug-pod.yaml
-|4,39,1,0,1751475663,"~/debug-pod.yaml"
--'  1  0  ~/debug-pod.yaml
-|4,39,1,0,1751475663,"~/debug-pod.yaml"
--'  1  0  ~/debug-pod.yaml
-|4,39,1,0,1751475663,"~/debug-pod.yaml"
--'  1  0  ~/debug-pod.yaml
-|4,39,1,0,1751475663,"~/debug-pod.yaml"
--'  1  0  ~/debug-pod.yaml
-|4,39,1,0,1751475663,"~/debug-pod.yaml"
--'  1  0  ~/debug-pod.yaml
-|4,39,1,0,1751475663,"~/debug-pod.yaml"
--'  1  0  ~/debug-pod.yaml
-|4,39,1,0,1751475663,"~/debug-pod.yaml"
--'  1  0  ~/debug-pod.yaml
-|4,39,1,0,1751475663,"~/debug-pod.yaml"
--'  1  0  ~/debug-pod.yaml
-|4,39,1,0,1751475663,"~/debug-pod.yaml"
--'  1  0  ~/debug-pod.yaml
-|4,39,1,0,1751475663,"~/debug-pod.yaml"
--'  1  0  ~/debug-pod.yaml
-|4,39,1,0,1751475663,"~/debug-pod.yaml"
--'  1  0  ~/debug-pod.yaml
-|4,39,1,0,1751475663,"~/debug-pod.yaml"
--'  1  0  ~/debug-pod.yaml
-|4,39,1,0,1751475663,"~/debug-pod.yaml"
--'  69  0  ~/flask-deployment.yaml
-|4,39,69,0,1751475575,"~/flask-deployment.yaml"
--'  69  0  ~/flask-deployment.yaml
-|4,39,69,0,1751475575,"~/flask-deployment.yaml"
--'  69  0  ~/flask-deployment.yaml
-|4,39,69,0,1751475575,"~/flask-deployment.yaml"
--'  69  0  ~/flask-deployment.yaml
-|4,39,69,0,1751475575,"~/flask-deployment.yaml"
--'  69  0  ~/flask-deployment.yaml
-|4,39,69,0,1751475575,"~/flask-deployment.yaml"
--'  69  0  ~/flask-deployment.yaml
-|4,39,69,0,1751475575,"~/flask-deployment.yaml"
--'  69  0  ~/flask-deployment.yaml
-|4,39,69,0,1751475575,"~/flask-deployment.yaml"
--'  69  0  ~/flask-deployment.yaml
-|4,39,69,0,1751475575,"~/flask-deployment.yaml"
--'  69  0  ~/flask-deployment.yaml
-|4,39,69,0,1751475575,"~/flask-deployment.yaml"
--'  69  0  ~/flask-deployment.yaml
-|4,39,69,0,1751475575,"~/flask-deployment.yaml"
--'  69  0  ~/flask-deployment.yaml
-|4,39,69,0,1751475575,"~/flask-deployment.yaml"
--'  69  0  ~/flask-deployment.yaml
-|4,39,69,0,1751475575,"~/flask-deployment.yaml"
--'  69  0  ~/flask-deployment.yaml
-|4,39,69,0,1751475575,"~/flask-deployment.yaml"
--'  69  0  ~/flask-deployment.yaml
-|4,39,69,0,1751475575,"~/flask-deployment.yaml"
--'  69  0  ~/flask-deployment.yaml
-|4,39,69,0,1751475575,"~/flask-deployment.yaml"
--'  69  0  ~/flask-deployment.yaml
-|4,39,69,0,1751475575,"~/flask-deployment.yaml"
--'  69  0  ~/flask-deployment.yaml
-|4,39,69,0,1751475575,"~/flask-deployment.yaml"
--'  69  0  ~/flask-deployment.yaml
-|4,39,69,0,1751475575,"~/flask-deployment.yaml"
--'  69  0  ~/flask-deployment.yaml
-|4,39,69,0,1751475575,"~/flask-deployment.yaml"
--'  69  0  ~/flask-deployment.yaml
-|4,39,69,0,1751475575,"~/flask-deployment.yaml"
--'  69  0  ~/flask-deployment.yaml
-|4,39,69,0,1751475575,"~/flask-deployment.yaml"
--'  69  0  ~/flask-deployment.yaml
-|4,39,69,0,1751475575,"~/flask-deployment.yaml"
--'  69  0  ~/flask-deployment.yaml
-|4,39,69,0,1751475575,"~/flask-deployment.yaml"
--'  69  0  ~/flask-deployment.yaml
-|4,39,69,0,1751475575,"~/flask-deployment.yaml"
--'  69  0  ~/flask-deployment.yaml
-|4,39,69,0,1751475575,"~/flask-deployment.yaml"
--'  69  0  ~/flask-deployment.yaml
-|4,39,69,0,1751475575,"~/flask-deployment.yaml"
--'  69  0  ~/flask-deployment.yaml
-|4,39,69,0,1751475575,"~/flask-deployment.yaml"
--'  69  0  ~/flask-deployment.yaml
-|4,39,69,0,1751475575,"~/flask-deployment.yaml"
--'  69  0  ~/flask-deployment.yaml
-|4,39,69,0,1751475575,"~/flask-deployment.yaml"
--'  69  0  ~/flask-deployment.yaml
-|4,39,69,0,1751475575,"~/flask-deployment.yaml"
--'  69  0  ~/flask-deployment.yaml
-|4,39,69,0,1751475575,"~/flask-deployment.yaml"
--'  69  0  ~/flask-deployment.yaml
-|4,39,69,0,1751475575,"~/flask-deployment.yaml"
--'  1  0  ~/flask-deployment.yaml
-|4,39,1,0,1751475570,"~/flask-deployment.yaml"
--'  1  0  ~/flask-deployment.yaml
-|4,39,1,0,1751475570,"~/flask-deployment.yaml"
--'  1  0  ~/flask-deployment.yaml
-|4,39,1,0,1751475570,"~/flask-deployment.yaml"
--'  1  0  ~/flask-deployment.yaml
-|4,39,1,0,1751475570,"~/flask-deployment.yaml"
--'  1  0  ~/flask-deployment.yaml
-|4,39,1,0,1751475570,"~/flask-deployment.yaml"
--'  1  0  ~/flask-deployment.yaml
-|4,39,1,0,1751475570,"~/flask-deployment.yaml"
+-'  14  0  ~/limit-range.yaml
+|4,39,14,0,1751481188,"~/limit-range.yaml"
+-'  1  0  ~/limit-range.yaml
+|4,39,1,0,1751481170,"~/limit-range.yaml"
+-'  13  0  ~/resource-quota.yaml
+|4,39,13,0,1751481094,"~/resource-quota.yaml"
+-'  13  0  ~/resource-quota.yaml
+|4,39,13,0,1751481094,"~/resource-quota.yaml"
+-'  1  0  ~/resource-quota.yaml
+|4,39,1,0,1751481086,"~/resource-quota.yaml"
+-'  1  0  ~/resource-quota.yaml
+|4,39,1,0,1751481086,"~/resource-quota.yaml"
+-'  8  31  ~/flask-configmap.yaml
+|4,39,8,31,1751479090,"~/flask-configmap.yaml"
+-'  8  31  ~/flask-configmap.yaml
+|4,39,8,31,1751479090,"~/flask-configmap.yaml"
+-'  8  31  ~/flask-configmap.yaml
+|4,39,8,31,1751479090,"~/flask-configmap.yaml"
+-'  8  31  ~/flask-configmap.yaml
+|4,39,8,31,1751479090,"~/flask-configmap.yaml"
+-'  1  0  ~/flask-configmap.yaml
+|4,39,1,0,1751479081,"~/flask-configmap.yaml"
+-'  1  0  ~/flask-configmap.yaml
+|4,39,1,0,1751479081,"~/flask-configmap.yaml"
+-'  1  0  ~/flask-configmap.yaml
+|4,39,1,0,1751479081,"~/flask-configmap.yaml"
+-'  1  0  ~/flask-configmap.yaml
+|4,39,1,0,1751479081,"~/flask-configmap.yaml"
+-'  8  24  ~/mysql-configmap.yaml
+|4,39,8,24,1751478540,"~/mysql-configmap.yaml"
+-'  8  24  ~/mysql-configmap.yaml
+|4,39,8,24,1751478540,"~/mysql-configmap.yaml"
+-'  8  24  ~/mysql-configmap.yaml
+|4,39,8,24,1751478540,"~/mysql-configmap.yaml"
+-'  8  24  ~/mysql-configmap.yaml
+|4,39,8,24,1751478540,"~/mysql-configmap.yaml"
+-'  8  24  ~/mysql-configmap.yaml
+|4,39,8,24,1751478540,"~/mysql-configmap.yaml"
+-'  8  24  ~/mysql-configmap.yaml
+|4,39,8,24,1751478540,"~/mysql-configmap.yaml"
+-'  8  24  ~/mysql-configmap.yaml
+|4,39,8,24,1751478540,"~/mysql-configmap.yaml"
+-'  8  24  ~/mysql-configmap.yaml
+|4,39,8,24,1751478540,"~/mysql-configmap.yaml"
+-'  1  0  ~/mysql-configmap.yaml
+|4,39,1,0,1751478515,"~/mysql-configmap.yaml"
+-'  1  0  ~/mysql-configmap.yaml
+|4,39,1,0,1751478515,"~/mysql-configmap.yaml"
+-'  1  0  ~/mysql-configmap.yaml
+|4,39,1,0,1751478515,"~/mysql-configmap.yaml"
+-'  1  0  ~/mysql-configmap.yaml
+|4,39,1,0,1751478515,"~/mysql-configmap.yaml"
+-'  1  0  ~/mysql-configmap.yaml
+|4,39,1,0,1751478515,"~/mysql-configmap.yaml"
+-'  1  0  ~/mysql-configmap.yaml
+|4,39,1,0,1751478515,"~/mysql-configmap.yaml"
+-'  1  0  ~/mysql-configmap.yaml
+|4,39,1,0,1751478515,"~/mysql-configmap.yaml"
+-'  1  0  ~/mysql-configmap.yaml
+|4,39,1,0,1751478515,"~/mysql-configmap.yaml"
+-'  11  53  ~/mysql-secret.yaml
+|4,39,11,53,1751478498,"~/mysql-secret.yaml"
+-'  11  53  ~/mysql-secret.yaml
+|4,39,11,53,1751478498,"~/mysql-secret.yaml"
+-'  11  53  ~/mysql-secret.yaml
+|4,39,11,53,1751478498,"~/mysql-secret.yaml"
+-'  11  53  ~/mysql-secret.yaml
+|4,39,11,53,1751478498,"~/mysql-secret.yaml"
+-'  11  53  ~/mysql-secret.yaml
+|4,39,11,53,1751478498,"~/mysql-secret.yaml"
+-'  11  53  ~/mysql-secret.yaml
+|4,39,11,53,1751478498,"~/mysql-secret.yaml"
+-'  11  53  ~/mysql-secret.yaml
+|4,39,11,53,1751478498,"~/mysql-secret.yaml"
+-'  11  53  ~/mysql-secret.yaml
+|4,39,11,53,1751478498,"~/mysql-secret.yaml"
+-'  11  53  ~/mysql-secret.yaml
+|4,39,11,53,1751478498,"~/mysql-secret.yaml"
+-'  11  53  ~/mysql-secret.yaml
+|4,39,11,53,1751478498,"~/mysql-secret.yaml"
+-'  11  53  ~/mysql-secret.yaml
+|4,39,11,53,1751478498,"~/mysql-secret.yaml"
+-'  11  53  ~/mysql-secret.yaml
+|4,39,11,53,1751478498,"~/mysql-secret.yaml"
+-'  11  53  ~/mysql-secret.yaml
+|4,39,11,53,1751478498,"~/mysql-secret.yaml"
+-'  11  53  ~/mysql-secret.yaml
+|4,39,11,53,1751478498,"~/mysql-secret.yaml"
+-'  11  53  ~/mysql-secret.yaml
+|4,39,11,53,1751478498,"~/mysql-secret.yaml"
+-'  11  53  ~/mysql-secret.yaml
+|4,39,11,53,1751478498,"~/mysql-secret.yaml"
+-'  11  53  ~/mysql-secret.yaml
+|4,39,11,53,1751478350,"~/mysql-secret.yaml"
+-'  11  53  ~/mysql-secret.yaml
+|4,39,11,53,1751478350,"~/mysql-secret.yaml"
+-'  11  53  ~/mysql-secret.yaml
+|4,39,11,53,1751478350,"~/mysql-secret.yaml"
+-'  11  53  ~/mysql-secret.yaml
+|4,39,11,53,1751478350,"~/mysql-secret.yaml"
+-'  11  53  ~/mysql-secret.yaml
+|4,39,11,53,1751478350,"~/mysql-secret.yaml"
+-'  11  53  ~/mysql-secret.yaml
+|4,39,11,53,1751478350,"~/mysql-secret.yaml"
+-'  11  53  ~/mysql-secret.yaml
+|4,39,11,53,1751478350,"~/mysql-secret.yaml"
+-'  11  53  ~/mysql-secret.yaml
+|4,39,11,53,1751478350,"~/mysql-secret.yaml"
+-'  11  53  ~/mysql-secret.yaml
+|4,39,11,53,1751478350,"~/mysql-secret.yaml"
+-'  11  53  ~/mysql-secret.yaml
+|4,39,11,53,1751478350,"~/mysql-secret.yaml"
+-'  11  53  ~/mysql-secret.yaml
+|4,39,11,53,1751478350,"~/mysql-secret.yaml"
+-'  11  53  ~/mysql-secret.yaml
+|4,39,11,53,1751478350,"~/mysql-secret.yaml"
+-'  11  53  ~/mysql-secret.yaml
+|4,39,11,53,1751478350,"~/mysql-secret.yaml"
+-'  11  53  ~/mysql-secret.yaml
+|4,39,11,53,1751478350,"~/mysql-secret.yaml"
+-'  11  53  ~/mysql-secret.yaml
+|4,39,11,53,1751478350,"~/mysql-secret.yaml"
+-'  11  53  ~/mysql-secret.yaml
+|4,39,11,53,1751478350,"~/mysql-secret.yaml"
+-'  1  0  ~/mysql-secret.yaml
+|4,39,1,0,1751478336,"~/mysql-secret.yaml"
+-'  1  0  ~/mysql-secret.yaml
+|4,39,1,0,1751478336,"~/mysql-secret.yaml"
+-'  1  0  ~/mysql-secret.yaml
+|4,39,1,0,1751478336,"~/mysql-secret.yaml"
+-'  1  0  ~/mysql-secret.yaml
+|4,39,1,0,1751478336,"~/mysql-secret.yaml"
+-'  1  0  ~/mysql-secret.yaml
+|4,39,1,0,1751478336,"~/mysql-secret.yaml"
+-'  1  0  ~/mysql-secret.yaml
+|4,39,1,0,1751478336,"~/mysql-secret.yaml"
+-'  1  0  ~/mysql-secret.yaml
+|4,39,1,0,1751478336,"~/mysql-secret.yaml"
+-'  1  0  ~/mysql-secret.yaml
+|4,39,1,0,1751478336,"~/mysql-secret.yaml"
+-'  1  0  ~/mysql-secret.yaml
+|4,39,1,0,1751478336,"~/mysql-secret.yaml"
+-'  1  0  ~/mysql-secret.yaml
+|4,39,1,0,1751478336,"~/mysql-secret.yaml"
+-'  1  0  ~/mysql-secret.yaml
+|4,39,1,0,1751478336,"~/mysql-secret.yaml"
+-'  1  0  ~/mysql-secret.yaml
+|4,39,1,0,1751478336,"~/mysql-secret.yaml"
+-'  1  0  ~/mysql-secret.yaml
+|4,39,1,0,1751478336,"~/mysql-secret.yaml"
+-'  1  0  ~/mysql-secret.yaml
+|4,39,1,0,1751478336,"~/mysql-secret.yaml"
+-'  1  0  ~/mysql-secret.yaml
+|4,39,1,0,1751478336,"~/mysql-secret.yaml"
+-'  1  0  ~/mysql-secret.yaml
+|4,39,1,0,1751478336,"~/mysql-secret.yaml"
+-'  1  0  ~/mysql-secret.yaml
+|4,39,1,0,1751478336,"~/mysql-secret.yaml"
+-'  1  0  ~/mysql-secret.yaml
+|4,39,1,0,1751478336,"~/mysql-secret.yaml"
+-'  1  0  ~/mysql-secret.yaml
+|4,39,1,0,1751478336,"~/mysql-secret.yaml"
+-'  1  0  ~/mysql-secret.yaml
+|4,39,1,0,1751478336,"~/mysql-secret.yaml"
+-'  1  0  ~/mysql-secret.yaml
+|4,39,1,0,1751478336,"~/mysql-secret.yaml"
+-'  1  0  ~/mysql-secret.yaml
+|4,39,1,0,1751478336,"~/mysql-secret.yaml"
+-'  1  0  ~/mysql-secret.yaml
+|4,39,1,0,1751478336,"~/mysql-secret.yaml"
+-'  1  0  ~/mysql-secret.yaml
+|4,39,1,0,1751478336,"~/mysql-secret.yaml"
+-'  1  0  ~/mysql-secret.yaml
+|4,39,1,0,1751478336,"~/mysql-secret.yaml"
+-'  1  0  ~/mysql-secret.yaml
+|4,39,1,0,1751478336,"~/mysql-secret.yaml"
+-'  1  0  ~/mysql-secret.yaml
+|4,39,1,0,1751478336,"~/mysql-secret.yaml"
+-'  1  0  ~/mysql-secret.yaml
+|4,39,1,0,1751478336,"~/mysql-secret.yaml"
+-'  1  0  ~/mysql-secret.yaml
+|4,39,1,0,1751478336,"~/mysql-secret.yaml"
+-'  1  0  ~/mysql-secret.yaml
+|4,39,1,0,1751478336,"~/mysql-secret.yaml"
+-'  1  0  ~/mysql-secret.yaml
+|4,39,1,0,1751478336,"~/mysql-secret.yaml"
+-'  1  0  ~/mysql-secret.yaml
+|4,39,1,0,1751478336,"~/mysql-secret.yaml"
+-'  21  20  ~/mysql-pv.yaml
+|4,39,21,20,1751478308,"~/mysql-pv.yaml"
+-'  21  20  ~/mysql-pv.yaml
+|4,39,21,20,1751478308,"~/mysql-pv.yaml"
+-'  21  20  ~/mysql-pv.yaml
+|4,39,21,20,1751478308,"~/mysql-pv.yaml"
+-'  21  20  ~/mysql-pv.yaml
+|4,39,21,20,1751478308,"~/mysql-pv.yaml"
+-'  21  20  ~/mysql-pv.yaml
+|4,39,21,20,1751478308,"~/mysql-pv.yaml"
+-'  21  20  ~/mysql-pv.yaml
+|4,39,21,20,1751478308,"~/mysql-pv.yaml"
 
 # History of marks within files (newest to oldest):
+
+> ~/limit-range.yaml
+	*	1751481187	0
+	"	14	0
+	^	14	0
+	.	13	21
+	+	13	21
+
+> ~/resource-quota.yaml
+	*	1751481093	0
+	"	13	0
+	^	13	0
+	.	12	31
+	+	12	31
+
+> ~/flask-configmap.yaml
+	*	1751479089	0
+	"	8	31
+	^	8	32
+	.	8	31
+	+	8	31
+
+> ~/mysql-configmap.yaml
+	*	1751478539	0
+	"	8	24
+	^	8	25
+	.	8	24
+	+	8	24
+
+> ~/mysql-secret.yaml
+	*	1751478496	0
+	"	11	53
+	^	11	54
+	.	11	53
+	+	11	53
+
+> ~/mysql-pv.yaml
+	*	1751478307	0
+	"	21	20
+	^	21	21
+	.	21	20
+	+	21	20
+
+> ~/mysql-pvc.yaml
+	*	1751478265	0
+	"	12	21
+	^	12	22
+	.	12	21
+	+	12	21
+
+> ~/mysql-service.yaml
+	*	1751478222	0
+	"	10	16
+	^	10	17
+	.	10	16
+	+	10	16
+
+> ~/mysql-statefulsetOldHostPath.yaml
+	*	1751477923	0
+	"	52	34
+	^	52	35
+	.	52	34
+	+	52	34
+
+> ~/mysql-statefulset.yaml
+	*	1751477766	0
+	"	56	23
+	^	56	24
+	.	56	23
+	+	56	23
+
+> ~/flask-service.yaml
+	*	1751476942	0
+	"	11	57
+	^	11	59
+	.	11	57
+	+	11	57
+
+> ~/debug-new.yaml
+	*	1751476604	0
+	"	18	0
+	^	18	0
+	.	17	21
+	+	17	21
 
 > ~/flask-ingress.yaml
 	*	1751476039	0
