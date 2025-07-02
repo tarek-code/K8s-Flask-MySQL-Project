@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flask-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: flask
+  template:
+    metadata:
+      labels:
+        app: flask
+    spec:
+      containers:
+        - name: flask-app
+          image: tarekadel/k8s-flask-mysql-flaskapp:v6
+          ports:
+            - containerPort: 80
+          resources:
+            requests:
+              memory: "64Mi"
+              cpu: "100m"
+            limits:
+              memory: "128Mi"
+              cpu: "250m"
+          env:
+            - name: MYSQL_DATABASE_USER
+              valueFrom:
+                configMapKeyRef:
+                  name: flask-config
+                  key: MYSQL_DATABASE_USER
+            - name: MYSQL_DATABASE_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: mysql-secret
+                  key: mysql-password
+            - name: MYSQL_DATABASE_DB
+              valueFrom:
+                configMapKeyRef:
+                  name: flask-config
+                  key: MYSQL_DATABASE_DB
+            - name: MYSQL_DATABASE_HOST
+              valueFrom:
+                configMapKeyRef:
+                  name: flask-config
+                  key: MYSQL_DATABASE_HOST
