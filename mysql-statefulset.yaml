@@ -46,11 +46,11 @@ spec:
       imagePullSecrets:
         - name: regcred
   volumeClaimTemplates:
-    - metadata:
-        name: mysql-persistent-storage
-      spec:
-        storageClassName: local-path
-        accessModes: [ "ReadWriteOnce" ]
-        resources:
-          requests:
-            storage: 1Gi
+  - metadata:
+      name: mysql-persistent-storage
+    spec:
+      accessModes: ["ReadWriteMany"]
+      storageClassName: nfs-storage
+      resources:
+        requests:
+          storage: 1Gi
