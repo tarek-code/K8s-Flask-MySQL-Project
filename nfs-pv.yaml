@@ -8,7 +8,7 @@ spec:
   accessModes:
     - ReadWriteMany
   nfs:
-    server: 172.17.211.91     # ← IP بتاع NFS
+    server: 172.31.140.211     # ← IP بتاع NFS
     path: /mnt/nfs-share      # ← نفس المسار اللي عملته
   persistentVolumeReclaimPolicy: Retain
   storageClassName: nfs-storage
