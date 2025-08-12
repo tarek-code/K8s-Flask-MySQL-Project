@@ -1,11 +1,23 @@
 CREATE DATABASE IF NOT EXISTS flaskdb;
+
 CREATE USER IF NOT EXISTS 'flaskuser'@'%' IDENTIFIED WITH mysql_native_password BY 'yourpassword';
 GRANT ALL PRIVILEGES ON flaskdb.* TO 'flaskuser'@'%';
 FLUSH PRIVILEGES;
+
 USE flaskdb;
+
 CREATE TABLE IF NOT EXISTS users (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
     email VARCHAR(100) NOT NULL UNIQUE,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
+CREATE TABLE IF NOT EXISTS counter (
+    id INT PRIMARY KEY,
+    count INT NOT NULL DEFAULT 0
+);
+
+INSERT INTO counter (id, count) 
+SELECT 1, 0 
+WHERE NOT EXISTS (SELECT * FROM counter WHERE id = 1);
