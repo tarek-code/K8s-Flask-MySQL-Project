@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: mysql
-          image: tarekadel/k8s-flask-mysql-database:v12
+          image: tarekadel/k8s-flask-mysql-database:v13
           args: ["--port=3306"]
           ports:
             - containerPort: 3306

@@ -64,12 +64,12 @@ spec:
             - name: PROVISIONER_NAME
               value: nfs-client
             - name: NFS_SERVER
-              value: 172.17.211.91   # <-- عدّلها لو عندك IP مختلف
+              value: 192.168.2.155   # <-- عدّلها لو عندك IP مختلف
             - name: NFS_PATH
               value: /mnt/nfs-share
       volumes:
         - name: nfs-client-root
           nfs:
-            server: 172.17.211.91   # <-- نفس الـ IP
+            server: 192.168.2.155   # <-- نفس الـ IP
             path: /mnt/nfs-share
 

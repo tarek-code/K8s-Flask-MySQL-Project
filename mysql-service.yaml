@@ -7,4 +7,5 @@ spec:
     app: mysql
   ports:
     - port: 3306
-  clusterIP: None
+      targetPort: 3306
+  type: ClusterIP
