@@ -4,7 +4,7 @@ metadata:
   name: flask-ingress
   namespace: default
   annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /i
+    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   ingressClassName: nginx
   rules:
