@@ -25,7 +25,7 @@ jobs:
           pip install -r k8s/base/flaskapp/tests/requirements-tests.txt
 
       - name: Lint with flake8 and reviewdog
-        uses: reviewdog/action-flake8@v1
+        uses: reviewdog/action-flake8@v0.11.0
         with:
           args: "k8s/base/flaskapp/app.py"
           reporter: github-pr-review
