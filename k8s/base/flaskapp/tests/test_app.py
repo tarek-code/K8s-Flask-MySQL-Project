@@ -30,6 +30,19 @@ def test_home_route(mock_get_conn, client):
     assert b"Counter: 5" in response.data
 
 @patch('k8s.base.flaskapp.app.get_connection')
+def test_flask_route(mock_get_conn, client):
+    mock_cursor = MagicMock()
+    mock_cursor.fetchone.return_value = {'count': 7}  # رقم مختلف عشان نميز الاختبار
+
+    mock_conn = MagicMock()
+    mock_conn.cursor.return_value = mock_cursor
+
+    mock_get_conn.return_value = mock_conn
+
+    response = client.get('/flask')
+    assert response.status_code == 200
+    assert b"Counter: 7" in response.data
+@patch('k8s.base.flaskapp.app.get_connection')
 def test_increment_route(mock_get_conn, client):
     mock_cursor = MagicMock()
     mock_conn = MagicMock()
