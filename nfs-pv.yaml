@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: nfs-pv
+spec:
+  capacity:
+    storage: 1Gi
+  accessModes:
+    - ReadWriteMany
+  nfs:
+    server: 172.31.140.211     # ← IP بتاع NFS
+    path: /mnt/nfs-share      # ← نفس المسار اللي عملته
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: nfs-storage
+
