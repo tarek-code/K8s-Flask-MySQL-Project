@@ -8,7 +8,6 @@ resources:
   - mysql-statefulset.yaml
   - mysql-service.yaml
   - mysql-configmap.yaml
-  - mysql-pvc.yaml
   - mysql-secret.yaml
   - flask-ingress.yaml
 
