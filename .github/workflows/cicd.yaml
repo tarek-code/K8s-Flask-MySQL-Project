@@ -27,5 +27,8 @@ jobs:
       - name: Run pytest
         run: |
           export PYTHONPATH=$(pwd)
-          pytest k8s/base/flaskapp/tests
-
+          pytest k8s/base/flaskapp/tests/test_app.py
+      
+      - name: Lint with flake8
+        run: |
+          flake8 k8s/base/flaskapp/app.py
