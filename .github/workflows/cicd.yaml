@@ -1,3 +1,11 @@
+name: Run Pytest Only
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -16,14 +24,17 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r k8s/base/flaskapp/tests/requirements-tests.txt
 
-      - name: Lint with flake8 and reviewdog
+      - name: Install reviewdog
         run: |
           curl -sfL https://raw.githubusercontent.com/reviewdog/reviewdog/master/install.sh | sh -s -- -b $HOME/.local/bin latest
-          export PATH="$HOME/.local/bin:$PATH"
+          
+      - name: Lint with flake8 and reviewdog
+        env:
+          PATH: $HOME/.local/bin:$PATH
+        run: |
           flake8 k8s/base/flaskapp/app.py --format=default | reviewdog -f=flake8 -name="flake8" -reporter=github-pr-review -fail-on-error=false -level=warning
 
       - name: Run pytest
         run: |
           export PYTHONPATH=$(pwd)
           pytest k8s/base/flaskapp/tests/test_app.py
-
