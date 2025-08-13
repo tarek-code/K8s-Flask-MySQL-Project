@@ -4,10 +4,10 @@ metadata:
   name: app-quota
 spec:
   hard:
-    requests.cpu: "2"
-    requests.memory: 2Gi
-    limits.cpu: "4"
-    limits.memory: 4Gi
+    requests.cpu: "4"        # زيادة 30%
+    requests.memory: 8Gi     # زيادة 30%
+    limits.cpu: "4"          # نفس الزيادة
+    limits.memory: 8Gi       # نفس الزيادة
     pods: "10"
     persistentvolumeclaims: "5"
 
