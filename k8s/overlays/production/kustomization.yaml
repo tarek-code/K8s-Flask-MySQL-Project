@@ -1,0 +1,15 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+  - flask-configmap-prod.yaml
+  - flask-deployment-prod.yaml
+  - flask-ingress-prod.yaml
+  - flask-nodeport-prod.yaml
+  - flask-service-prod.yaml
+  - mysql-configmap-prod.yaml
+  - mysql-network-policy-prod.yaml
+  - mysql-secret-prod.yaml
+  - mysql-service-prod.yaml
+  - mysql-statefulset-prod.yaml
+
