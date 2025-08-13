@@ -83,15 +83,16 @@ jobs:
           echo "Updating production manifests with new tags..."
           sed -i "s|image: tarekadel/k8s-flask-mysql-flaskapp:.*|image: tarekadel/k8s-flask-mysql-flaskapp:${{ steps.tags.outputs.flask_tag }}|g" k8s/overlays/production/flask-deployment-prod.yaml
           sed -i "s|image: tarekadel/k8s-flask-mysql-database:.*|image: tarekadel/k8s-flask-mysql-database:${{ steps.tags.outputs.db_tag }}|g" k8s/overlays/production/mysql-statefulset-prod.yaml
+
       - name: Commit & Push changes
         if: contains(github.event.head_commit.message, '[build-image]')
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config user.name "tarek-code"
           git config user.email "tarekadel314@gmail.com"
           git add k8s/overlays/production/flask-deployment-prod.yaml k8s/overlays/production/mysql-statefulset-prod.yaml
           git commit -m "Update prod images to v${{ steps.tags.outputs.flask_tag }} and v${{ steps.tags.outputs.db_tag }}"
           git push
-        env:
-        GITHUB_TOKEN: ${{ secrets.GITTHUB_TOKEN }}
 
 
