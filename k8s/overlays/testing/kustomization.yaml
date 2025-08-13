@@ -1,0 +1,15 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+  - flask-configmap-tst.yaml
+  - flask-deployment-tst.yaml
+  - flask-ingress-tst.yaml
+  - flask-nodeport-tst.yaml
+  - flask-service-tst.yaml
+  - mysql-configmap-tst.yaml
+  - mysql-network-policy-tst.yaml
+  - mysql-secret-tst.yaml
+  - mysql-service-tst.yaml
+  - mysql-statefulset-tst.yaml
+
