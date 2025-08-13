@@ -34,7 +34,7 @@ jobs:
       
       - name: Lint SQL with sqlfluff
         run: |
-          sqlfluff lint k8s/base/database/init.sql
+          sqlfluff lint --dialect k8s/base/database/init.sql
 
       - name: Run pytest
         run: |
