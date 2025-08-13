@@ -46,4 +46,4 @@ jobs:
           export PYTHONPATH=$(pwd)
           coverage run -m pytest k8s/base/flaskapp/tests/test_app.py
           coverage report --fail-under=80
-          coverage html  # لو عايز التقرير بصيغة html
+          
