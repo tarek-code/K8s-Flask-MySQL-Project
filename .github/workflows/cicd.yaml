@@ -24,6 +24,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r k8s/base/flaskapp/tests/requirements-tests.txt
 
+      - name: Show OS info
+        run: uname -a
+
       - name: Install curl and reviewdog, then run flake8 with reviewdog
         env:
           PATH: $HOME/.local/bin:$PATH
