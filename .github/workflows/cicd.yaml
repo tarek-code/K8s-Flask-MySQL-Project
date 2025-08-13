@@ -28,7 +28,7 @@ jobs:
         env:
           PATH: $HOME/.local/bin:$PATH
         run: |
-          sudo apt-get update && sudo apt-get install -y curl
+          apt-get update && apt-get install -y curl
           curl -sfL https://raw.githubusercontent.com/reviewdog/reviewdog/master/install.sh | sh -s -- -b $HOME/.local/bin latest
           flake8 k8s/base/flaskapp/app.py --format=default | reviewdog -f=flake8 -name="flake8" -reporter=github-pr-review -fail-on-error=false -level=warning
 
