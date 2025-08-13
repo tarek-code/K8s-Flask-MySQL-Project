@@ -73,29 +73,28 @@ jobs:
       - name: Get latest tag for MySQL (Private Repo)
         if: contains(github.event.head_commit.message, '[build-image]')
         id: mysql_tag
+        env:
+          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
         run: |
           # Login and get JWT token
           token=$(curl -s -H "Content-Type: application/json" \
-            -X POST \
-            -d '{"username": "'${{ secrets.DOCKER_USERNAME }}'", "password": "'${{ secrets.DOCKER_PASSWORD }}'"}' \
-            https://hub.docker.com/v2/users/login/ | jq -r .token)
-
+          -X POST \
+          -d "{\"username\": \"${DOCKER_USERNAME}\", \"password\": \"${DOCKER_PASSWORD}\"}" \
+          https://hub.docker.com/v2/users/login/ | jq -r .token)
           if [ -z "$token" ] || [ "$token" = "null" ]; then
             echo "❌ Failed to get JWT token for Docker Hub"
-            exit 1
+          exit 1
           fi
 
           # Get latest version tag (only tags starting with v and number)
           latest_tag=$(curl -s -H "Authorization: JWT $token" \
-            "https://hub.docker.com/v2/repositories/tarekadel/k8s-flask-mysql-database/tags?page_size=100" \
-            | jq -r '.results[].name' \
-            | grep -E '^v[0-9]+$' \
-            | sort -V \
-            | tail -n 1)
-
+          "https://hub.docker.com/v2/repositories/tarekadel/k8s-flask-mysql-database/tags?page_size=100" \
+          | jq -r '.results[].name' \
+          | grep -E '^v[0-9]+$' \
+          | sort -V \
+          | tail -n 1)
           echo "Latest tag from DB repo: $latest_tag"
-
-          # Decide new tag
           if [[ "$latest_tag" =~ ^v[0-9]+$ ]]; then
             num=${latest_tag#v}
             new_tag="v$((num+1))"
@@ -105,6 +104,7 @@ jobs:
 
           echo "✅ New DB tag will be: $new_tag"
           echo "new_tag=$new_tag" >> $GITHUB_OUTPUT
+
 
       - name: Build & Push FlaskApp
         if: contains(github.event.head_commit.message, '[build-image]')
