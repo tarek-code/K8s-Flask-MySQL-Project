@@ -24,9 +24,14 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r k8s/base/flaskapp/tests/requirements-tests.txt
 
-      - name: Lint with flake8
+      - name: Install curl and reviewdog, then run flake8 with reviewdog
+        env:
+          PATH: $HOME/.local/bin:$PATH
         run: |
-          flake8 k8s/base/flaskapp/app.py || true
+          sudo apt-get update && sudo apt-get install -y curl
+          curl -sfL https://raw.githubusercontent.com/reviewdog/reviewdog/master/install.sh | sh -s -- -b $HOME/.local/bin latest
+          flake8 k8s/base/flaskapp/app.py --format=default | reviewdog -f=flake8 -name="flake8" -reporter=github-pr-review -fail-on-error=false -level=warning
+
 
 
       - name: Run pytest
