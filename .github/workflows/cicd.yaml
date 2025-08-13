@@ -77,4 +77,18 @@ jobs:
         run: |
           docker build -t tarekadel/k8s-flask-mysql-database:${{ steps.tags.outputs.db_tag }} k8s/base/database
           docker push tarekadel/k8s-flask-mysql-database:${{ steps.tags.outputs.db_tag }}
+      - name: Update production manifests with new image tags
+        if: contains(github.event.head_commit.message, '[build-image]')
+        run: |
+          echo "Updating production manifests with new tags..."
+          sed -i "s|image: tarekadel/k8s-flask-mysql-flaskapp:.*|image: tarekadel/k8s-flask-mysql-flaskapp:${{ steps.tags.outputs.flask_tag }}|g" k8s/overlays/production/flask-deployment-prod.yaml
+          sed -i "s|image: tarekadel/k8s-flask-mysql-database:.*|image: tarekadel/k8s-flask-mysql-database:${{ steps.tags.outputs.db_tag }}|g" k8s/overlays/production/mysql-statefulset-prod.yaml
+      - name: Commit & push updated manifests
+        if: contains(github.event.head_commit.message, '[build-image]')
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add k8s/overlays/production/flask-deployment-prod.yaml k8s/overlays/production/mysql-statefulset-prod.yaml
+          git commit -m "Update prod images to ${{ steps.tags.outputs.flask_tag }} and ${{ steps.tags.outputs.db_tag }}" || echo "No changes to commit"
+          git push origin main
 
