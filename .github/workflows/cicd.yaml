@@ -31,7 +31,10 @@ jobs:
           reporter: github-pr-review
           fail_on_error: false
           level: warning
-
+      
+      - name: Lint SQL with sqlfluff
+        run: |
+          sqlfluff lint k8s/base/database/init.sql
 
       - name: Run pytest
         run: |
