@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: flask-app
-          image: tarekadel/k8s-flask-mysql-flaskapp:v10
+          image: tarekadel/k8s-flask-mysql-flaskapp:v11
           ports:
             - containerPort: 80
           resources:
