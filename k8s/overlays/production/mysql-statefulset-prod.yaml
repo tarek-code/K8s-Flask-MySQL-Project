@@ -4,7 +4,7 @@ metadata:
   name: mysql
 spec:
   serviceName: db-service
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels:
       app: mysql
@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: mysql
-          image: tarekadel/k8s-flask-mysql-database:v14
+          image: tarekadel/k8s-flask-mysql-database:v13
           args: ["--port=3306"]
           ports:
             - containerPort: 3306
