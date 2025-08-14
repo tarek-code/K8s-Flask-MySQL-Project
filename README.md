@@ -45,6 +45,7 @@ To set up the working environment, you will need two Virtual Machines (VMs) runn
 
 - **k8s-master**: Master node for the Kubernetes cluster.
 - **k8s-worker**: Worker node for the Kubernetes cluster.
+- **NFS**       : Act like a place storing data of DB app.
 
 **VM Specifications for each VM:**
 
