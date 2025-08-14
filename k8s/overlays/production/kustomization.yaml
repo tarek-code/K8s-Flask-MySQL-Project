@@ -13,3 +13,24 @@ resources:
   - mysql-service-prod.yaml
   - mysql-statefulset-prod.yaml
 
+images:
+  - name: tarekadel/k8s-flask-mysql-flaskapp
+    newTag: "v10"   # هنا هتحط الإصدار الجديد للـ flask-app
+  - name: tarekadel/k8s-flask-mysql-database
+    newTag: "v13"   # هنا هتحط الإصدار الجديد للـ mysql
+
+patches:
+  - target:
+      kind: Deployment
+      name: flask-app
+    patch: |-
+      - op: replace
+        path: /spec/replicas
+        value: 3
+  - target:
+      kind: StatefulSet
+      name: mysql
+    patch: |-
+      - op: replace
+        path: /spec/replicas
+        value: 3
