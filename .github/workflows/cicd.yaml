@@ -93,7 +93,7 @@ jobs:
         run: |
           git config user.name "tarek-code"
           git config user.email "tarekadel314@gmail.com"
-          git add k8s/overlays/production/flask-deployment-prod.yaml k8s/overlays/production/mysql-statefulset-prod.yaml
+          git add k8s/overlays/production/kustomization.yaml
           git commit -m "Update prod images to v${{ steps.tags.outputs.flask_tag }} and v${{ steps.tags.outputs.db_tag }}"
           git push
 
